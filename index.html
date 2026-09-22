@@ -1258,8 +1258,10 @@
     if (btn.textContent.includes('Hire') || btn.href?.includes('mailto')) btn.addEventListener('click', fireConfetti);
   });
 
-  // LOADER
-  window.addEventListener('load', () => setTimeout(() => document.getElementById('loader').classList.add('hidden'), 1700));
+  // LOADER: hide as soon as the document is ready instead of adding a fixed wait.
+  const hideLoader = () => requestAnimationFrame(() => document.getElementById('loader').classList.add('hidden'));
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', hideLoader, { once: true });
+  else hideLoader();
 
   // SCROLL PROGRESS + BACK TO TOP + ACTIVE NAV + HIRE BANNER
   let bannerShown = false;
