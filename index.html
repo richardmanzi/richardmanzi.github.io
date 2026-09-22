@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EP4B79686V"></script>
+  <!-- Google Analytics (GA4), deferred until after the page is usable -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-EP4B79686V');
+    window.addEventListener('load', () => setTimeout(() => {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-EP4B79686V';
+      document.head.appendChild(script);
+      gtag('js', new Date());
+      gtag('config', 'G-EP4B79686V');
+    }, 1500));
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +28,7 @@
   <meta property="og:description" content="Richard Manzi — Software Developer, AI Builder & Creative Technologist from Kigali, Rwanda. Building AI tools, web apps, and digital solutions. Currently studying Robotic Design." />
   <meta name="twitter:title" content="Richard Manzi | Software Developer & Creative Technologist — Kigali, Rwanda" />
   <meta name="twitter:description" content="Richard Manzi — Software Developer, AI Builder & Creative Technologist from Kigali, Rwanda. Available for hire." />
-  <meta property="og:image" content="https://richardmanzi.github.io/profile.jpg" />
+  <meta property="og:image" content="https://richardmanzi.github.io/profile.webp" />
   <meta property="og:url" content="https://richardmanzi.github.io/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -45,7 +50,7 @@
     "name": "Richard Manzi",
     "alternateName": "Manzi Richard",
     "url": "https://richardmanzi.github.io/",
-    "image": "https://richardmanzi.github.io/profile.jpg",
+    "image": "https://richardmanzi.github.io/profile.webp",
     "jobTitle": "Software Developer & Creative Technologist",
     "worksFor": {
       "@type": "Organization",
@@ -258,6 +263,7 @@
     .project-card:hover { border-color: rgba(195,216,9,0.4); transform: translateY(-5px); box-shadow: 0 20px 50px var(--shadow); }
     .project-card:hover::before { transform: scaleX(1); }
     .project-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem; }
+    .project-img-placeholder { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--dark3), rgba(195,216,9,0.16)); color: var(--lime); font-size: 3.2rem; }
     .project-icon { width: 50px; height: 50px; border-radius: 12px; background: rgba(195,216,9,0.12); border: 1px solid rgba(195,216,9,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.2rem; }
     .project-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
     .project-desc { color: var(--muted); font-size: 0.87rem; line-height: 1.7; margin-bottom: 1.2rem; }
@@ -704,7 +710,7 @@
       </div>
     </div>
     <div class="hero-photo">
-      <div class="hero-photo-wrap"><img src="profile.jpg" alt="Richard Manzi" /></div>
+      <div class="hero-photo-wrap"><img src="profile.webp" width="900" height="1157" decoding="async" alt="Richard Manzi" /></div>
     </div>
   </div>
 </section>
@@ -803,7 +809,7 @@
       <div class="project-card fade-in" onclick="openModal('modal-6')"><div class="project-icon">✏️</div><div class="project-title">Interactive Learning App</div><div class="project-desc">Children practice writing letters using touch input and interactive feedback.</div><div class="project-tags"><span class="project-tag">EdTech</span><span class="project-tag">Touch UI</span><span class="project-tag">Interactive</span></div><div class="project-more">View Details →</div></div>
       <div class="project-card fade-in" onclick="openModal('modal-7')"><div class="project-icon">⚙️</div><div class="project-title">Automation Workflows (n8n)</div><div class="project-desc">n8n workflows to automate digital processes, content distribution, and repetitive tasks.</div><div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">Automation</span><span class="project-tag">Productivity</span></div><div class="project-more">View Details →</div></div>
       <div class="project-card fade-in" onclick="openModal('modal-8')"><div class="project-icon">📋</div><div class="project-title">Digital Productivity Products</div><div class="project-desc">Structured Notion systems and planning tools sold as digital products.</div><div class="project-tags"><span class="project-tag">Notion</span><span class="project-tag">Productivity</span><span class="project-tag">Digital Products</span></div><div class="project-more">View Details →</div></div>
-      <div class="project-card fade-in" onclick="openModal('modal-9')"><img src="ruzizi-project.jpg" alt="Ruzizi Tented Lodge" class="project-img" /><div class="project-title">Ruzizi Tented Lodge — Booking Portal</div><div class="project-desc">A verified direct booking inquiry portal for Ruzizi Tented Lodge at Akagera National Park, Rwanda.</div><div class="project-tags"><span class="project-tag">Tourism</span><span class="project-tag">Web Dev</span><span class="project-tag">Netlify</span></div><div class="project-more">View Details →</div></div>
+      <div class="project-card fade-in" onclick="openModal('modal-9')"><div class="project-img project-img-placeholder" role="img" aria-label="Ruzizi Tented Lodge">🏕️</div><div class="project-title">Ruzizi Tented Lodge — Booking Portal</div><div class="project-desc">A verified direct booking inquiry portal for Ruzizi Tented Lodge at Akagera National Park, Rwanda.</div><div class="project-tags"><span class="project-tag">Tourism</span><span class="project-tag">Web Dev</span><span class="project-tag">Netlify</span></div><div class="project-more">View Details →</div></div>
     </div>
   </div>
 </section>
@@ -879,7 +885,7 @@
       <div class="about-card fade-in" style="padding:0; overflow:hidden; border-radius:16px;"><div style="height:180px; background:linear-gradient(135deg,#222022,#2e2c2e); display:flex; align-items:center; justify-content:center; font-size:4rem;">🖼️</div><div style="padding:1.4rem;"><div style="font-weight:700; color:var(--text); margin-bottom:0.4rem;">Digital Media &amp; Storytelling</div><div style="color:var(--muted); font-size:0.86rem; line-height:1.7;">Creating compelling visual narratives for online platforms, social media, and digital marketing campaigns.</div></div></div>
     </div>
     <div style="background:var(--card); border:1px solid rgba(195,216,9,0.25); border-radius:16px; padding:2rem; display:flex; align-items:center; gap:2rem; flex-wrap:wrap;">
-      <img src="profile.jpg" alt="Richard Manzi" style="width:110px; height:110px; border-radius:12px; object-fit:cover; object-position:top; border:2px solid rgba(195,216,9,0.4); flex-shrink:0;" />
+      <img src="profile.webp" width="110" height="142" decoding="async" alt="Richard Manzi" style="width:110px; height:110px; border-radius:12px; object-fit:cover; object-position:top; border:2px solid rgba(195,216,9,0.4); flex-shrink:0;" />
       <div>
         <div style="font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:800; color:var(--text); margin-bottom:0.4rem;">Richard Manzi — Freelance Creative</div>
         <div style="color:var(--muted); font-size:0.9rem; line-height:1.8; max-width:480px;">Based in Kigali, Rwanda. Available for events, brand shoots, and digital content creation.</div>
@@ -1477,17 +1483,17 @@
   });
 </script>
 
-<!--Start of Tawk.to Script-->
+<!--Start of Tawk.to Script, deferred so chat cannot delay the initial page load-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69cf67f4b2f8a31c44a28c87/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+window.addEventListener('load', () => setTimeout(() => {
+  var s1=document.createElement('script');
+  s1.async=true;
+  s1.src='https://embed.tawk.to/69cf67f4b2f8a31c44a28c87/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  document.body.appendChild(s1);
+}, 5000));
 </script>
 <!--End of Tawk.to Script-->
 
