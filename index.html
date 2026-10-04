@@ -42,7 +42,11 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:image" content="https://richardmanzi.github.io/og-image.svg" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/profile.webp" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Space+Grotesk:wght@400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Space+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" /></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -692,8 +696,9 @@
         <a href="#projects" class="btn-primary">View My Work →</a>
         <a href="mailto:richardmanzi30@gmail.com" class="btn-secondary">✉ Get In Touch</a>
         <a href="mycv_260314_131811.jpg" download="Richard_Manzi_CV.jpg" class="btn-download">⬇ Download CV</a>
-        <button id="pwa-install-btn" style="display:none; align-items:center; gap:0.5rem; background:var(--card); color:var(--lime); border:1px solid var(--border); padding:0.7rem 1.2rem; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer;">📱 Install App</button>
+        <button type="button" id="pwa-install-btn" aria-label="Install Richard Manzi's portfolio for offline access" style="display:none; align-items:center; gap:0.5rem; background:var(--card); color:var(--lime); border:1px solid var(--border); padding:0.7rem 1.2rem; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer;">📱 Install for Offline Access</button>
       </div>
+      <p style="font-size:0.78rem; color:var(--muted); margin-top:0.65rem;">To prepare an offline copy, open this page once while online and let it finish loading.</p>
       <div class="hero-stats">
         <div class="stat"><span class="stat-num counter" data-target="8">0</span><span class="stat-label">Projects</span></div>
         <div class="stat"><span class="stat-num counter" data-target="2">0</span><span class="stat-label">Years Exp.</span></div>
@@ -710,7 +715,7 @@
       </div>
     </div>
     <div class="hero-photo">
-      <div class="hero-photo-wrap"><img src="profile.webp" width="900" height="1157" decoding="async" alt="Richard Manzi" /></div>
+      <div class="hero-photo-wrap"><img src="profile.webp" width="900" height="1157" loading="eager" fetchpriority="high" decoding="async" alt="Richard Manzi" /></div>
     </div>
   </div>
 </section>
@@ -885,7 +890,7 @@
       <div class="about-card fade-in" style="padding:0; overflow:hidden; border-radius:16px;"><div style="height:180px; background:linear-gradient(135deg,#222022,#2e2c2e); display:flex; align-items:center; justify-content:center; font-size:4rem;">🖼️</div><div style="padding:1.4rem;"><div style="font-weight:700; color:var(--text); margin-bottom:0.4rem;">Digital Media &amp; Storytelling</div><div style="color:var(--muted); font-size:0.86rem; line-height:1.7;">Creating compelling visual narratives for online platforms, social media, and digital marketing campaigns.</div></div></div>
     </div>
     <div style="background:var(--card); border:1px solid rgba(195,216,9,0.25); border-radius:16px; padding:2rem; display:flex; align-items:center; gap:2rem; flex-wrap:wrap;">
-      <img src="profile.webp" width="110" height="142" decoding="async" alt="Richard Manzi" style="width:110px; height:110px; border-radius:12px; object-fit:cover; object-position:top; border:2px solid rgba(195,216,9,0.4); flex-shrink:0;" />
+      <img src="profile.webp" width="110" height="142" loading="lazy" decoding="async" alt="Richard Manzi" style="width:110px; height:110px; border-radius:12px; object-fit:cover; object-position:top; border:2px solid rgba(195,216,9,0.4); flex-shrink:0;" />
       <div>
         <div style="font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:800; color:var(--text); margin-bottom:0.4rem;">Richard Manzi — Freelance Creative</div>
         <div style="color:var(--muted); font-size:0.9rem; line-height:1.8; max-width:480px;">Based in Kigali, Rwanda. Available for events, brand shoots, and digital content creation.</div>
@@ -1462,11 +1467,9 @@
   style.textContent = '@keyframes fadeSlideIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }';
   document.head.appendChild(style);
 
-  // PWA SERVICE WORKER
+  // Start offline-shell caching as soon as the parsed page is ready.
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js').catch(() => {});
-    });
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
   }
 
   // PWA INSTALL PROMPT
