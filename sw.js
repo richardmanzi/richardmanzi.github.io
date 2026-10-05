@@ -1,4 +1,4 @@
-const CACHE_NAME = 'richard-portfolio-v5';
+const CACHE_NAME = 'richard-portfolio-v6';
 const HOME_URL = new URL('./', self.registration.scope).href;
 const INDEX_URL = new URL('index.html', HOME_URL).href;
 const OFFLINE_URL = new URL('offline.html', HOME_URL).href;
@@ -8,7 +8,7 @@ const APP_SHELL = [
   INDEX_URL,
   OFFLINE_URL,
   new URL('profile.webp', HOME_URL).href,
-  new URL('glass.css', HOME_URL).href,
+  new URL('glass.css?v=depth-3d-2026-10-05', HOME_URL).href,
   new URL('manifest.json', HOME_URL).href,
   new URL('testimonials.json', HOME_URL).href,
   new URL('app-icon-192.png', HOME_URL).href,
@@ -17,7 +17,9 @@ const APP_SHELL = [
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL))
+    caches.open(CACHE_NAME).then(cache =>
+      cache.addAll(APP_SHELL.map(url => new Request(url, { cache: 'reload' })))
+    )
   );
   self.skipWaiting();
 });
