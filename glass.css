@@ -551,3 +551,65 @@ body > main a:hover { background: var(--lime3); }
   body > nav, #mobile-drawer, #hire-banner, #cookie-banner, .about-card, .service-card,
   .project-card, .testimonial-card, .contact-item, body > main { backdrop-filter: none; -webkit-backdrop-filter: none; }
 }
+
+
+/* Quiet 3D depth: a layered portrait and pointer-only card lift, with no JS/WebGL. */
+.hero-photo {
+  position: relative;
+  isolation: isolate;
+  perspective: 1100px;
+  transform-style: preserve-3d;
+  margin: 0 .55rem .5rem 0;
+}
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 1.2rem -.45rem -.45rem 1.1rem;
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 40px;
+  background: linear-gradient(145deg, rgba(255,255,255,.84), rgba(229,233,216,.72));
+  box-shadow: 0 24px 48px rgba(58,55,43,.10), inset 0 1px 0 rgba(255,255,255,.92);
+  transform: translate3d(0,0,-24px) rotate(2.5deg);
+  pointer-events: none;
+}
+.hero-photo-wrap {
+  transform-style: preserve-3d;
+  transition: transform .28s cubic-bezier(.2,.7,.25,1), box-shadow .28s ease;
+  box-shadow: 0 28px 64px rgba(56,51,40,.16), 0 5px 14px rgba(56,51,40,.08), inset 0 1px 0 rgba(255,255,255,.96);
+}
+.hero-photo-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,.24), transparent 34%);
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-photo-wrap:hover {
+    transform: perspective(1100px) rotateY(-2deg) rotateX(1.25deg) translateY(-3px);
+    box-shadow: 0 34px 72px rgba(56,51,40,.19), 0 7px 18px rgba(56,51,40,.09), inset 0 1px 0 rgba(255,255,255,.96);
+  }
+
+  .about-card, .service-card, .skill-category, .project-card, .edu-card,
+  .testimonial-card, .lang-card, .contact-item, .blog-card {
+    transform-style: preserve-3d;
+    transition: transform .22s cubic-bezier(.2,.7,.25,1), box-shadow .22s ease, border-color .22s ease;
+  }
+  .about-card:hover, .service-card:hover, .skill-category:hover, .project-card:hover,
+  .edu-card:hover, .testimonial-card:hover, .lang-card:hover, .contact-item:hover, .blog-card:hover {
+    transform: perspective(1000px) translateY(-4px) rotateX(.55deg);
+    box-shadow: 0 18px 38px rgba(48,47,37,.10), inset 0 1px 0 rgba(255,255,255,.86);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo-wrap { transition: none; }
+  .hero-photo-wrap:hover,
+  .about-card:hover, .service-card:hover, .skill-category:hover, .project-card:hover,
+  .edu-card:hover, .testimonial-card:hover, .lang-card:hover, .contact-item:hover, .blog-card:hover {
+    transform: none;
+  }
+}
