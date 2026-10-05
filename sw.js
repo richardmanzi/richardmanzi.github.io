@@ -1,4 +1,4 @@
-const CACHE_NAME = 'richard-portfolio-v4';
+const CACHE_NAME = 'richard-portfolio-v5';
 const HOME_URL = new URL('./', self.registration.scope).href;
 const INDEX_URL = new URL('index.html', HOME_URL).href;
 const OFFLINE_URL = new URL('offline.html', HOME_URL).href;
