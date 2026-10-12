@@ -1,4 +1,4 @@
-const CACHE_NAME = 'richard-portfolio-v7-esp32-community';
+const CACHE_NAME = 'richard-portfolio-v9-project-groups-robotics';
 const HOME_URL = new URL('./', self.registration.scope).href;
 const INDEX_URL = new URL('index.html', HOME_URL).href;
 const OFFLINE_URL = new URL('offline.html', HOME_URL).href;
@@ -8,7 +8,7 @@ const APP_SHELL = [
   INDEX_URL,
   OFFLINE_URL,
   new URL('profile.webp', HOME_URL).href,
-  new URL('glass.css?v=depth-3d-2026-10-05', HOME_URL).href,
+  new URL('glass.css?v=projects-groups-2026-10-12', HOME_URL).href,
   new URL('manifest.json', HOME_URL).href,
   new URL('testimonials.json', HOME_URL).href,
   new URL('app-icon-192.png', HOME_URL).href,
@@ -17,6 +17,8 @@ const APP_SHELL = [
   new URL('assets/community/esp32/esp32-dht11-web.webp', HOME_URL).href,
   new URL('assets/community/esp32/esp32-sound-visualizer.webp', HOME_URL).href,
   new URL('assets/community/esp32/esp32-rgb-strip.webp', HOME_URL).href,
+  new URL('assets/community/robotics/poppy-ergo-jr.webp', HOME_URL).href,
+  new URL('assets/community/ROBOTICS-ATTRIBUTIONS.md', HOME_URL).href,
   new URL('assets/community/licenses/sidharth-tutorial-MIT.txt', HOME_URL).href,
   new URL('assets/community/licenses/sounddance-esp32-MIT.txt', HOME_URL).href,
   new URL('assets/community/licenses/tikita-led-blink-MIT.txt', HOME_URL).href,

@@ -1,0 +1,13 @@
+# Robotics Community Reference — Source & Attribution
+
+This is an independently authored open-source learning reference, **not a project built by Richard Manzi**. It is the only robotics candidate currently included because its code, build documentation, parts/wiring references, and reusable source image were verified.
+
+## Poppy Ergo Jr — 6-DoF desktop robot arm
+
+- **Project source and sample code:** [poppy-project/poppy-ergo-jr](https://github.com/poppy-project/poppy-ergo-jr). The project README identifies the original development team as Matthieu Lapeyre (mechanics and design), Pierre Rouanet (software), and Jonathan Grizou (electronics). The photographer of the project photo is not individually identified in the source guide.
+- **Software license:** [GNU GPL version 3](https://raw.githubusercontent.com/poppy-project/poppy-ergo-jr/master/software/LICENSE).
+- **Hardware license:** [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/), as stated in the project README.
+- **Official assembly guide and source photo:** [Ergo Jr assembly guide](https://github.com/poppy-project/poppy-docs/blob/master/en/assembly-guides/ergo-jr/README.md) · [original image](https://raw.githubusercontent.com/poppy-project/poppy-docs/master/en/assembly-guides/ergo-jr/img/ErgoJr.jpg). The source image is part of the official `poppy-docs` repository, whose [LICENSE.md](https://github.com/poppy-project/poppy-docs/blob/master/LICENSE.md) specifies CC BY-SA 4.0 for the documentation repository. The local `poppy-ergo-jr.webp` preserves the original 1200 × 800 image's aspect ratio and is re-encoded to WebP without cropping or resizing; it is not generated or retouched.
+- **Build references:** [bill of materials](https://github.com/poppy-project/poppy-docs/blob/master/en/assembly-guides/ergo-jr/bom.md) · [electronics assembly and wiring](https://github.com/poppy-project/poppy-docs/blob/master/en/assembly-guides/ergo-jr/electronic-assembly.md) · [motor configuration](https://github.com/poppy-project/poppy-docs/blob/master/en/assembly-guides/ergo-jr/motor-configuration.md) · [mechanical construction](https://github.com/poppy-project/poppy-docs/blob/master/en/assembly-guides/ergo-jr/mechanical-construction.md).
+
+The portfolio card links to the original project, source code, assembly instructions, image source, and applicable licenses. The displayed photo is credited to the Poppy Project documentation; no individual photographer credit is supplied by the source page.
