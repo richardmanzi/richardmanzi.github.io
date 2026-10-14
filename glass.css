@@ -690,3 +690,243 @@ body > main a:hover { background: var(--lime3); }
     transform: none;
   }
 }
+
+
+/* Black + neon portfolio theme with original, static line-art texture. */
+:root {
+  --lime: #00ff5e;
+  --lime2: #39ff82;
+  --lime3: #00d653;
+  --dark: #000000;
+  --dark2: #000000;
+  --dark3: #000000;
+  --card: rgba(3, 8, 4, .96);
+  --border: rgba(0, 255, 94, .22);
+  --text: #f1fff5;
+  --muted: #a8b7ac;
+  --shadow: rgba(0, 255, 94, .12);
+  --nav-bg: rgba(0, 0, 0, .92);
+  color-scheme: dark;
+}
+
+html { background: #000; }
+body {
+  color: var(--text);
+  background-color: #000;
+  background-image: url("assets/neon-doodles.svg");
+  background-position: center top;
+  background-size: 560px 560px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+::selection { background: var(--lime); color: #000; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: var(--lime3); border: 2px solid #000; }
+:focus-visible { outline-color: var(--lime) !important; }
+
+/* Keep the patterned black canvas visible between content blocks. */
+#hero, section, footer {
+  color: var(--text);
+  background: transparent !important;
+}
+#hero::before, #hero::after { background: none !important; }
+section { border-color: rgba(0, 255, 94, .08); }
+#progress-bar { background: var(--lime); box-shadow: 0 0 12px rgba(0,255,94,.34); }
+#loader { background: #000; }
+.loader-bar-bg { background: #102016; }
+.loader-bar-fill { background: var(--lime); }
+
+/* Navigation and floating controls */
+body > nav {
+  background: rgba(0,0,0,.91);
+  border: 1px solid rgba(0,255,94,.24);
+  box-shadow: 0 12px 34px rgba(0,0,0,.72), inset 0 1px 0 rgba(0,255,94,.08);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+.nav-logo, .drawer-logo, .footer-name { color: var(--lime); }
+.nav-links li a { color: #b1bcb4; }
+.nav-links li a:hover, .nav-links li a.active { color: var(--lime); background: rgba(0,255,94,.10); }
+.nav-social, .drawer-social-link, .footer-social {
+  background: #050805;
+  border-color: rgba(0,255,94,.22);
+  color: var(--text);
+}
+.nav-social[title="LinkedIn"] { color: #000 !important; background: var(--lime); border-color: var(--lime); }
+.lang-switcher { background: #050805; border-color: var(--border); }
+.lang-btn.active { color: #000; background: var(--lime); }
+.nav-avail-dot { background: var(--lime); box-shadow: 0 0 9px rgba(0,255,94,.7); }
+.hamburger span { background: var(--lime); }
+#mobile-drawer { background: rgba(0,0,0,.97); border-color: var(--border); box-shadow: -20px 0 60px rgba(0,0,0,.75); }
+.drawer-close { background: #080d09; border-color: var(--border); color: var(--text); }
+.drawer-links a { color: var(--text); border-color: rgba(0,255,94,.15); }
+.drawer-links a:hover { color: var(--lime); }
+.drawer-cv { color: var(--lime); border-color: rgba(0,255,94,.4); }
+.drawer-overlay { background: rgba(0,0,0,.78); }
+
+/* Hero, portraits, and calls to action */
+#hero { min-height: min(100vh, 920px); min-height: min(100svh, 920px); }
+.hero-badge, .countdown-badge {
+  color: var(--lime);
+  background: rgba(0,255,94,.055);
+  border-color: rgba(0,255,94,.26);
+  box-shadow: none;
+}
+.hero-badge::before { color: var(--lime); }
+.hero-name .first { color: var(--text); }
+.hero-name .last, .hero-title .typed-text { color: var(--lime); }
+.hero-title, .hero-desc { color: var(--muted); }
+.hero-title .cursor { background: var(--lime); }
+.hero-photo::before {
+  border-color: rgba(0,255,94,.38);
+  background: #030704;
+  box-shadow: 0 20px 42px rgba(0,0,0,.7), inset 0 1px 0 rgba(0,255,94,.08);
+}
+.hero-photo-wrap {
+  border-color: rgba(0,255,94,.58);
+  background: #000;
+  box-shadow: 0 0 34px rgba(0,255,94,.12), 0 26px 60px rgba(0,0,0,.75);
+}
+.hero-photo-wrap::after { background: linear-gradient(135deg, rgba(0,255,94,.10), transparent 38%); }
+.stat {
+  color: var(--text);
+  background: rgba(2,7,3,.94);
+  border-color: rgba(0,255,94,.2);
+  box-shadow: inset 0 1px 0 rgba(0,255,94,.04);
+}
+.stat-num { color: var(--lime); }
+.stat-label { color: #9eada3; }
+.btn-primary, .service-cta, .form-btn, .t-form-btn, .nav-cta, .drawer-cta {
+  color: #000;
+  background: var(--lime);
+  box-shadow: 0 0 18px rgba(0,255,94,.13);
+}
+.btn-primary:hover, .service-cta:hover, .form-btn:hover, .t-form-btn:hover, .nav-cta:hover, .drawer-cta:hover {
+  color: #000;
+  background: var(--lime2);
+  box-shadow: 0 0 24px rgba(0,255,94,.24);
+}
+.btn-secondary, .btn-download {
+  color: var(--text);
+  background: rgba(0,0,0,.72);
+  border-color: rgba(0,255,94,.27);
+}
+.btn-secondary:hover, .btn-download:hover { color: var(--lime); background: rgba(0,255,94,.055); border-color: var(--lime); }
+.btn-download { color: var(--lime); }
+#hero .hero-actions #pwa-install-btn { color: var(--lime) !important; background: #030704 !important; border-color: var(--border) !important; }
+
+/* Original cards and project groupings remain intact; only their treatment changes. */
+.why-card, .about-card, .service-card, .skill-category, .project-card, .edu-card,
+.testimonial-card, .testimonial-form-wrap, .lang-card, .contact-item, .blog-card,
+.countdown-card, .pricing-grid-wrap > div, .project-directory-block, .project-directory-link,
+.countdown-unit {
+  color: var(--text);
+  background: rgba(2,7,3,.95);
+  border-color: rgba(0,255,94,.19);
+  box-shadow: 0 12px 32px rgba(0,0,0,.48), inset 0 1px 0 rgba(0,255,94,.035);
+}
+.why-card:hover, .about-card:hover, .service-card:hover, .skill-category:hover, .project-card:hover,
+.edu-card:hover, .testimonial-card:hover, .lang-card:hover, .contact-item:hover, .blog-card:hover {
+  border-color: rgba(0,255,94,.42);
+  box-shadow: 0 18px 40px rgba(0,0,0,.62), 0 0 20px rgba(0,255,94,.055);
+}
+.why-card-title, .about-card-title, .service-name, .skill-cat-title, .project-title,
+.edu-degree, .testimonial-name, .lang-name, .countdown-title, .section-title, .why-title,
+.modal-title, .testimonial-form-title, .timeline-title { color: var(--text); }
+.why-card-text, .about-card-text, .about-text p, .service-desc, .service-feature,
+.skill-bar-name, .project-desc, .timeline-company, .timeline-desc, .testimonial-text,
+.testimonial-form-sub, .lang-level, .blog-card-excerpt, .countdown-subtitle,
+.section-sub, .why-sub, .footer-text, .stat-label { color: var(--muted); }
+.section-tag, .project-directory-kicker, .project-group-kicker, .project-more,
+.about-info-value, .contact-value, .edu-school, .timeline-date, .skill-bar-pct,
+.countdown-number, .countdown-progress-label { color: var(--lime); }
+.section-title span { color: var(--lime); }
+.divider { background: var(--lime); box-shadow: 0 0 12px rgba(0,255,94,.22); }
+.project-directory-note, .project-group-note { color: var(--muted); }
+.project-directory-link { color: var(--text); }
+.project-directory-link strong, .project-directory-learning, .project-directory-community { background: rgba(0,255,94,.055); color: var(--lime); }
+.project-directory-link:hover, .project-directory-link:focus-visible { color: var(--lime); background: rgba(0,255,94,.08); border-color: rgba(0,255,94,.45); }
+.service-card::before { background: linear-gradient(90deg, var(--lime), transparent); }
+.service-card.featured, .testimonial-form-wrap { border-color: rgba(0,255,94,.36); }
+.service-badge, .blog-tag { color: var(--lime); background: rgba(0,255,94,.08); }
+.service-feature::before { color: var(--lime); }
+.skill-cat-icon, .about-info-icon, .contact-icon, .project-icon { color: var(--lime); background: rgba(0,255,94,.08); border-color: rgba(0,255,94,.22); }
+.skill-bar-bg, .countdown-progress-bar { background: #102016; }
+.skill-bar-fill, .countdown-progress-fill { background: var(--lime); }
+.skill-tag { color: var(--lime); background: rgba(0,255,94,.06); border-color: rgba(0,255,94,.2); }
+.project-tag { color: #b3c1b7; background: rgba(0,255,94,.035); border-color: rgba(0,255,94,.16); }
+.project-img-placeholder { color: var(--lime); background: #030704; }
+
+/* Forms, modal, visitor notices, footer, and offline fallback */
+input, textarea, select, .t-form-input, .t-form-textarea, .t-form-select {
+  color: var(--text);
+  background: #030704;
+  border-color: rgba(0,255,94,.24);
+}
+input::placeholder, textarea::placeholder { color: #738078; }
+.t-form-label, .about-info-label, .contact-label, .countdown-label { color: var(--muted); }
+.form-btn, .t-form-btn { border-color: var(--lime); }
+.modal-box { color: var(--text); background: #030704; border-color: rgba(0,255,94,.28); }
+.modal-close { color: var(--muted); background: #080d09; border-color: var(--border); }
+.modal-desc, .modal-feature { color: var(--muted); }
+.modal-feature::before, .modal-features-title { color: var(--lime); }
+.timeline::before { background: linear-gradient(to bottom, var(--lime), transparent); }
+.timeline-dot { background: var(--lime); border-color: #000; box-shadow: 0 0 12px rgba(0,255,94,.45); }
+.countdown-unit { border-color: rgba(0,255,94,.18); }
+#hire-banner {
+  color: var(--text);
+  background: rgba(0,0,0,.94);
+  border-top: 1px solid rgba(0,255,94,.3);
+  box-shadow: 0 -10px 28px rgba(0,0,0,.65);
+}
+.hire-banner-text, .hire-banner-close { color: var(--text); }
+.hire-banner-text span { color: var(--muted); }
+.hire-banner-btn { color: #000; background: var(--lime); }
+footer { border-top: 1px solid rgba(0,255,94,.18); }
+#whatsapp-btn { box-shadow: 0 0 20px rgba(0,255,94,.22), 0 0 0 4px rgba(0,0,0,.92); }
+#back-top { color: var(--lime); background: #030704; border-color: var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.65); }
+#back-top:hover { color: #000; background: var(--lime); }
+#cookie-banner {
+  color: var(--text) !important;
+  background: rgba(0,0,0,.97) !important;
+  border-top: 1px solid rgba(0,255,94,.26) !important;
+  box-shadow: 0 -12px 32px rgba(0,0,0,.7);
+}
+#cookie-banner p { color: var(--muted) !important; }
+#cookie-banner a { color: var(--lime) !important; }
+#visitor-badge { color: var(--text) !important; background: rgba(0,0,0,.92) !important; border-color: var(--border) !important; }
+body > main {
+  color: var(--text);
+  background: rgba(2,7,3,.96);
+  border-color: rgba(0,255,94,.24);
+  box-shadow: 0 24px 70px rgba(0,0,0,.7), inset 0 1px 0 rgba(0,255,94,.05);
+}
+body > main h1 { color: var(--text); }
+body > main p { color: var(--muted); }
+body > main a { color: #000; background: var(--lime); }
+
+@media (max-width: 700px) {
+  body { background-size: 420px 420px; background-attachment: scroll; }
+  .hero-photo::before { border-radius: 32px; }
+}
+
+/* Keep the existing share links, but remove their platform-specific blue/green fills. */
+#hero > .hero-inner .hero-text > div[style*="Share:"] a {
+  color: #000 !important;
+  background: var(--lime) !important;
+  border: 1px solid rgba(0,255,94,.45) !important;
+  box-shadow: 0 0 12px rgba(0,255,94,.08);
+}
+#hero > .hero-inner .hero-text > div[style*="Share:"] button {
+  color: var(--lime) !important;
+  background: #030704 !important;
+  border-color: rgba(0,255,94,.28) !important;
+}
+
+#hero a[href^="https://wa.me/?text="],
+#hero a[href*="linkedin.com/sharing"],
+#hero a[href*="twitter.com/intent"] {
+  color: #000 !important;
+  background: var(--lime) !important;
+  border: 1px solid rgba(0,255,94,.45) !important;
+}

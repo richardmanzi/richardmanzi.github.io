@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" fill="none">
+  <g stroke="#00FF5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".18">
+    <!-- Phone and message mark -->
+    <rect x="38" y="42" width="94" height="152" rx="18"/>
+    <path d="M70 53h30m-37 12h44v89H63z"/>
+    <path d="M76 111h20m-20 10h13m-24 31 3 13 12-8"/>
+    <circle cx="85" cy="180" r="3"/>
+    <!-- Circuit traces -->
+    <path d="M364 50h76l18 18h82m-176 11h122l19 19h81m-222 13h72l18-18h104m-121 43h86l18 18h68"/>
+    <circle cx="364" cy="50" r="4" fill="#00FF5E"/><circle cx="540" cy="68" r="4" fill="#00FF5E"/>
+    <circle cx="383" cy="92" r="4" fill="#00FF5E"/><circle cx="586" cy="105" r="4" fill="#00FF5E"/>
+    <circle cx="483" cy="117" r="4" fill="#00FF5E"/><circle cx="619" cy="149" r="4" fill="#00FF5E"/>
+    <!-- Atom / orbit -->
+    <circle cx="202" cy="286" r="7"/>
+    <ellipse cx="202" cy="286" rx="58" ry="22" transform="rotate(30 202 286)"/>
+    <ellipse cx="202" cy="286" rx="58" ry="22" transform="rotate(-30 202 286)"/>
+    <ellipse cx="202" cy="286" rx="22" ry="58"/>
+    <circle cx="150" cy="256" r="3" fill="#00FF5E"/><circle cx="251" cy="255" r="3" fill="#00FF5E"/>
+    <!-- Microchip / processor -->
+    <rect x="390" y="230" width="102" height="102" rx="17"/>
+    <rect x="414" y="254" width="54" height="54" rx="9"/>
+    <path d="M424 278h34m-17-17v34m-37-50v-12m22 12v-12m22 12v-12m22 12v-12m-66 114v-12m22 12v-12m22 12v-12m22 12v-12m-98-66h-12m12 22h-12m12 22h-12m12 22h-12m126-66h-12m12 22h-12m12 22h-12m12 22h-12"/>
+    <!-- Laptop with chart -->
+    <rect x="46" y="438" width="166" height="104" rx="12"/>
+    <path d="M60 454h138v68H60zM30 548h198l-12 14H42z"/>
+    <path d="m78 502 23-22 23 12 24-26 25 15 19-14"/>
+    <circle cx="78" cy="502" r="3" fill="#00FF5E"/><circle cx="124" cy="492" r="3" fill="#00FF5E"/><circle cx="172" cy="481" r="3" fill="#00FF5E"/>
+    <!-- Cloud sync and connected nodes -->
+    <path d="M351 472a26 26 0 0 1 49-11 22 22 0 1 1 8 43h-53a17 17 0 0 1-4-32z"/>
+    <path d="M373 490v-20m0 20-11-10m11 10 11-10m-11 10v10"/>
+    <circle cx="373" cy="460" r="3" fill="#00FF5E"/><circle cx="362" cy="480" r="3" fill="#00FF5E"/><circle cx="384" cy="480" r="3" fill="#00FF5E"/><circle cx="373" cy="500" r="3" fill="#00FF5E"/>
+    <!-- Wandering traces to tie the tile together -->
+    <path d="M0 350h54l18 18h70m498-2h-52l-18 18h-65M286 640v-46l18-18v-48m-20-528v42l-16 16v42"/>
+    <circle cx="54" cy="350" r="3" fill="#00FF5E"/><circle cx="140" cy="368" r="3" fill="#00FF5E"/>
+    <circle cx="588" cy="384" r="3" fill="#00FF5E"/><circle cx="286" cy="594" r="3" fill="#00FF5E"/><circle cx="268" cy="148" r="3" fill="#00FF5E"/>
+  </g>
+</svg>
