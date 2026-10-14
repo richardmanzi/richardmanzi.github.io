@@ -924,8 +924,7 @@ body > main a { color: #000; background: var(--lime); }
 }
 
 #hero a[href^="https://wa.me/?text="],
-#hero a[href*="linkedin.com/sharing"],
-#hero a[href*="twitter.com/intent"] {
+#hero a[href*="linkedin.com/sharing"] {
   color: #000 !important;
   background: var(--lime) !important;
   border: 1px solid rgba(0,255,94,.45) !important;
