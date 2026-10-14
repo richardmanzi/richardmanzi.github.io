@@ -930,3 +930,68 @@ body > main a { color: #000; background: var(--lime); }
   background: var(--lime) !important;
   border: 1px solid rgba(0,255,94,.45) !important;
 }
+
+/* Community project panels have dedicated legacy gradient rules; keep them dark too. */
+.project-group { background: transparent; }
+.project-community-group, .community-section {
+  color: var(--text);
+  background: rgba(2,7,3,.96) !important;
+  border-color: rgba(0,255,94,.2);
+  box-shadow: 0 14px 34px rgba(0,0,0,.48), inset 0 1px 0 rgba(0,255,94,.035);
+}
+.project-group-title { color: var(--text); }
+.project-group-description, .community-source-note { color: var(--muted); }
+.project-group-count {
+  color: var(--lime);
+  background: rgba(0,255,94,.06);
+  border-color: rgba(0,255,94,.22);
+}
+.community-jump {
+  color: var(--text);
+  background: rgba(0,255,94,.035);
+  border-color: rgba(0,255,94,.18);
+}
+.community-links a {
+  color: var(--lime);
+  background: #030704;
+  border-color: rgba(0,255,94,.2);
+}
+.community-links a:hover { color: #000; background: var(--lime); border-color: var(--lime); }
+
+.community-source-note a { color: var(--lime); text-decoration-color: rgba(0,255,94,.55); }
+
+/* Final high-specificity overrides for legacy light-theme component details. */
+.community-badge {
+  color: var(--lime);
+  background: rgba(0,255,94,.075);
+  border-color: rgba(0,255,94,.24);
+}
+.community-resources {
+  color: var(--text);
+  background: rgba(3,8,4,.96);
+  border-color: rgba(0,255,94,.18);
+}
+.community-resources summary { color: var(--lime); }
+.community-detail, .community-credit { color: var(--muted); }
+.community-detail strong, .community-credit strong { color: var(--text); }
+.testimonial-avatar { color: #000; background: var(--lime); }
+.blog-card-header { background: #030704; }
+.blog-card-header::before { background: rgba(0,255,94,.055); }
+.blog-card-title { color: var(--text); }
+.blog-read-more { color: var(--lime); }
+.form-input, .form-textarea, .t-form-input, .t-form-textarea, .t-form-select {
+  color: var(--text);
+  background: #030704 !important;
+  border-color: rgba(0,255,94,.24) !important;
+}
+.form-input:focus, .form-textarea:focus, .t-form-input:focus, .t-form-textarea:focus, .t-form-select:focus {
+  border-color: var(--lime) !important;
+  box-shadow: 0 0 0 3px rgba(0,255,94,.12);
+}
+.form-label { color: var(--muted); }
+select option { color: var(--text); background: #030704; }
+#avail-calendar > div {
+  color: var(--text);
+  background: rgba(2,7,3,.95) !important;
+  border-color: rgba(0,255,94,.19) !important;
+}
