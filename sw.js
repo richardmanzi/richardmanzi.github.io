@@ -1,4 +1,4 @@
-const CACHE_NAME = 'richard-portfolio-v12-black-neon-doodles';
+const CACHE_NAME = 'richard-portfolio-v13-telegram-night';
 const HOME_URL = new URL('./', self.registration.scope).href;
 const INDEX_URL = new URL('index.html', HOME_URL).href;
 const OFFLINE_URL = new URL('offline.html', HOME_URL).href;
@@ -8,8 +8,7 @@ const APP_SHELL = [
   INDEX_URL,
   OFFLINE_URL,
   new URL('profile.webp', HOME_URL).href,
-  new URL('glass.css?v=black-neon-doodles-v2-2026-10-14', HOME_URL).href,
-  new URL('assets/neon-doodles.svg', HOME_URL).href,
+  new URL('glass.css?v=telegram-night-2026-10-15', HOME_URL).href,
   new URL('manifest.json', HOME_URL).href,
   new URL('testimonials.json', HOME_URL).href,
   new URL('app-icon-192.png', HOME_URL).href,
