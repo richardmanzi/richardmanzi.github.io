@@ -1,4 +1,4 @@
-const CACHE_NAME = 'richard-portfolio-v14-telegram-floating';
+const CACHE_NAME = 'richard-portfolio-v15-telegram-doodles';
 const HOME_URL = new URL('./', self.registration.scope).href;
 const INDEX_URL = new URL('index.html', HOME_URL).href;
 const OFFLINE_URL = new URL('offline.html', HOME_URL).href;
@@ -8,7 +8,8 @@ const APP_SHELL = [
   INDEX_URL,
   OFFLINE_URL,
   new URL('profile.webp', HOME_URL).href,
-  new URL('glass.css?v=telegram-floating-2026-10-16', HOME_URL).href,
+  new URL('glass.css?v=telegram-doodles-2026-10-16', HOME_URL).href,
+  new URL('assets/doodle-wallpaper.svg', HOME_URL).href,
   new URL('manifest.json', HOME_URL).href,
   new URL('testimonials.json', HOME_URL).href,
   new URL('app-icon-192.png', HOME_URL).href,

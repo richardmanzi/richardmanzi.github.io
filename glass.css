@@ -657,7 +657,7 @@ body > main a:hover { background: var(--lime3); }
 }
 
 
-/* Telegram-inspired dark portfolio theme: slate surfaces, calm blue accents, no decorative wallpaper. */
+/* Telegram-inspired dark portfolio theme: slate surfaces, calm blue accents, and restrained hand-drawn wallpaper. */
 :root {
   --lime: #6ab2f2;
   --lime2: #86c8ff;
@@ -1026,4 +1026,29 @@ body > .mobile-tabbar {
 @media (max-width: 380px) {
   .contact-whatsapp-cta { gap: .45rem; padding: .68rem .82rem; font-size: .84rem; }
   .contact-whatsapp-number { font-size: .74rem; }
+}
+
+
+/* Original, low-contrast hand-drawn wallpaper; content cards stay opaque for readability. */
+body {
+  background-color: #17212b !important;
+  background-image: url("assets/doodle-wallpaper.svg") !important;
+  background-repeat: repeat !important;
+  background-size: 560px 560px !important;
+}
+#hero {
+  background-image: url("assets/doodle-wallpaper.svg"), linear-gradient(180deg, #1b2935, #17212b) !important;
+  background-position: 0 0, center;
+  background-repeat: repeat, no-repeat;
+  background-size: 560px 560px, cover;
+}
+section, footer {
+  background-image: url("assets/doodle-wallpaper.svg") !important;
+  background-position: 0 0;
+  background-repeat: repeat !important;
+  background-size: 560px 560px !important;
+}
+@media (max-width: 600px) {
+  body, #hero, section, footer { background-size: 480px 480px !important; }
+  #hero { background-size: 480px 480px, cover !important; }
 }
