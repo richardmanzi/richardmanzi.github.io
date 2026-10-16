@@ -120,24 +120,6 @@
     .hire-banner-btn:hover { background: var(--dark2); }
     .hire-banner-close { background: none; border: none; color: var(--dark); font-size: 1.2rem; cursor: pointer; opacity: 0.6; flex-shrink: 0; }
 
-    /* MOBILE DRAWER */
-    #mobile-drawer { position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: var(--dark2); border-left: 1px solid var(--border); z-index: 300; transform: translateX(100%); visibility: hidden; transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), visibility 0.35s; display: flex; flex-direction: column; padding: 2rem 1.5rem; overflow-y: auto; }
-    #mobile-drawer.open { transform: translateX(0); visibility: visible; }
-    .drawer-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; }
-    .drawer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--lime); }
-    .drawer-close { background: var(--card); border: 1px solid var(--border); color: var(--muted); width: 36px; height: 36px; border-radius: 8px; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; }
-    .drawer-links { display: flex; flex-direction: column; }
-    .drawer-links a { color: var(--text); text-decoration: none; font-size: 1rem; font-weight: 500; padding: 0.9rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0.6rem; transition: color 0.2s, padding-left 0.2s; }
-    .drawer-links a:hover { color: var(--lime); padding-left: 0.5rem; }
-    .drawer-actions { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
-    .drawer-cta { background: var(--lime); color: var(--dark); padding: 0.9rem; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 800; font-size: 0.95rem; }
-    .drawer-cv { background: transparent; color: var(--lime); padding: 0.9rem; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid rgba(195,216,9,0.4); }
-    .drawer-socials { display: flex; gap: 0.8rem; margin-top: 1.5rem; }
-    .drawer-social-link { width: 40px; height: 40px; border-radius: 8px; background: var(--card); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.1rem; transition: border-color 0.2s; }
-    .drawer-social-link:hover { border-color: var(--lime); }
-    .drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 299; opacity: 0; visibility: hidden; transition: 0.3s; }
-    .drawer-overlay.open { opacity: 1; visibility: visible; }
-
     /* NAV */
     nav { position: fixed; top: 3px; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 4%; background: var(--nav-bg); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); gap: 1rem; }
     .nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--lime); text-decoration: none; letter-spacing: -0.5px; flex-shrink: 0; }
@@ -600,7 +582,7 @@
 }
 
 </style>
-  <link rel="stylesheet" href="glass.css?v=telegram-night-2026-10-15" />
+  <link rel="stylesheet" href="glass.css?v=telegram-floating-2026-10-16" />
 </head>
 <body>
 
@@ -618,47 +600,6 @@
   <a href="mailto:richardmanzi30@gmail.com?subject=Hiring%20Inquiry&body=Hi%20Richard," class="hire-banner-btn">Hire Me Now →</a>
   <button class="hire-banner-close" onclick="document.getElementById('hire-banner').style.display='none'">✕</button>
 </div>
-
-<!-- MOBILE DRAWER -->
-<div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
-<aside id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Site menu" aria-hidden="true">
-  <div class="drawer-header">
-    <div class="drawer-profile">
-      <span class="drawer-logo drawer-avatar" aria-hidden="true">RM</span>
-      <span class="drawer-identity"><strong>Richard Manzi</strong><small>Developer · Kigali, Rwanda</small></span>
-    </div>
-    <button class="drawer-close" type="button" onclick="closeDrawer()" aria-label="Close menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
-    </button>
-  </div>
-  <nav class="drawer-links" aria-label="Site sections">
-    <a href="#about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span>About</span></a>
-    <a href="#why-me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 1.8 5.8L20 11l-6.2 2.2L12 19l-1.8-5.8L4 11l6.2-2.2L12 3Z"/><path d="m19 15 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z"/></svg><span>Why Hire Me</span></a>
-    <a href="#services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18m-11 0v2h4v-2"/></svg><span>Services</span></a>
-    <a href="#skills"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h7m4 0h5M4 17h3m4 0h9"/><circle cx="13" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg><span>Skills</span></a>
-    <a href="#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2h6.5A2.5 2.5 0 0 1 21 9.5v8a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5Z"/><path d="M3.5 10h17"/></svg><span>Projects</span></a>
-    <a href="#experience"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><span>Experience</span></a>
-    <a href="#education"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.5 9 9.5-5 9.5 5-9.5 5-9.5-5Z"/><path d="M6 11v5c3.8 3 8.2 3 12 0v-5m3.5-2v6"/></svg><span>Education</span></a>
-    <a href="#photography"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3l1.5-2h7L17 7h3a1 1 0 0 1 1 1v11H3V8a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></svg><span>Photography</span></a>
-    <a href="#testimonials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H7l-4 2v-5.5A7.5 7.5 0 1 1 20 11.5Z"/><path d="M9 10h.01M13 10h.01M17 10h.01"/></svg><span>Testimonials</span></a>
-    <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>Contact</span></a>
-  </nav>
-  <div class="drawer-actions">
-    <a href="mailto:richardmanzi30@gmail.com?subject=Hiring%20Inquiry&body=Hi%20Richard," class="drawer-cta">Hire Me</a>
-    <a href="mycv_260314_131811.jpg" download="Richard_Manzi_CV.jpg" class="drawer-cv">Download CV</a>
-  </div>
-  <div class="drawer-socials" aria-label="Social links">
-    <a href="https://github.com/manzirichard" target="_blank" rel="noopener noreferrer" class="drawer-social-link" aria-label="GitHub">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.5 1.4-4.5-2.5-6.3-3M15 21v-3.5a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6A4.7 4.7 0 0 0 18.4 6a4.3 4.3 0 0 0-.1-3s-1-.3-3.3 1.2a11.5 11.5 0 0 0-6 0C6.7 2.7 5.7 3 5.7 3a4.3 4.3 0 0 0-.1 3 4.7 4.7 0 0 0-1.3 3.3c0 4.7 2.8 5.7 5.5 6A3 3 0 0 0 9 17.5V21"/></svg>
-    </a>
-    <a href="https://wa.me/250782511514" target="_blank" rel="noopener noreferrer" class="drawer-social-link" aria-label="WhatsApp">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.7a8.5 8.5 0 1 1 16.1-4.1Z"/><path d="M9 8.5c.3-.6.6-.6 1-.6h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.6.7c-.2.2-.2.4-.1.6a6.7 6.7 0 0 0 2.8 2.7c.3.1.5.1.7-.1l.8-.9c.2-.2.4-.3.7-.2l1.6.8c.3.1.4.3.4.5 0 .7-.4 1.4-1 1.8-.6.4-1.4.5-2.2.3-1.1-.3-2.5-.9-4-2.3-1.5-1.4-2.3-2.8-2.7-3.9-.3-.8-.2-1.6.2-2.2Z"/></svg>
-    </a>
-    <a href="mailto:richardmanzi30@gmail.com" class="drawer-social-link" aria-label="Email Richard">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-    </a>
-  </div>
-</aside>
 
 <!-- NAV -->
 <nav>
@@ -685,8 +626,26 @@
     <a href="https://wa.me/250782511514" target="_blank" rel="noopener noreferrer" class="nav-social" title="WhatsApp" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.7a8.5 8.5 0 1 1 16.1-4.1Z"/><path d="M9 8.5c.3-.6.6-.6 1-.6h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.6.7c-.2.2-.2.4-.1.6a6.7 6.7 0 0 0 2.8 2.7c.3.1.5.1.7-.1l.8-.9c.2-.2.4-.3.7-.2l1.6.8c.3.1.4.3.4.5 0 .7-.4 1.4-1 1.8-.6.4-1.4.5-2.2.3-1.1-.3-2.5-.9-4-2.3-1.5-1.4-2.3-2.8-2.7-3.9-.3-.8-.2-1.6.2-2.2Z"/></svg></a>
     <span class="nav-avail-dot" title="Available for new projects"></span>
     <a href="mailto:richardmanzi30@gmail.com?subject=Hiring%20Inquiry&body=Hi%20Richard," class="nav-cta" id="nav-hire-btn" onclick="fireConfetti()">Hire Me</a>
-    <button class="hamburger" id="menu-toggle" type="button" onclick="openDrawer()" aria-label="Open menu" aria-controls="mobile-drawer" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
+</nav>
+
+<nav class="mobile-tabbar" aria-label="Mobile quick navigation">
+  <a class="mobile-tab is-active" href="#hero" aria-current="page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2h-4v-6H9v6H5a2 2 0 0 1-2-2Z"/></svg>
+    <span>Home</span>
+  </a>
+  <a class="mobile-tab" href="#projects">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2h6.5A2.5 2.5 0 0 1 21 9.5v8a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5Z"/><path d="M3.5 10h17"/></svg>
+    <span>Projects</span>
+  </a>
+  <a class="mobile-tab" href="#about">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+    <span>About</span>
+  </a>
+  <a class="mobile-tab" href="#contact">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+    <span>Contact</span>
+  </a>
 </nav>
 
 <!-- HERO -->
@@ -1281,6 +1240,11 @@
     <h2 class="section-title">Get In <span>Touch</span></h2>
     <div class="divider"></div>
     <p class="section-sub">Available for remote work, freelance projects, and international opportunities. Let's build something great together.</p>
+    <a class="contact-whatsapp-cta" href="https://wa.me/250782511514?text=Hi%20Richard%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20work%20with%20you." target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.7a8.5 8.5 0 1 1 16.1-4.1Z"/><path d="M9 8.5c.3-.6.6-.6 1-.6h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.6.7c-.2.2-.2.4-.1.6a6.7 6.7 0 0 0 2.8 2.7c.3.1.5.1.7-.1l.8-.9c.2-.2.4-.3.7-.2l1.6.8c.3.1.4.3.4.5 0 .7-.4 1.4-1 1.8-.6.4-1.4.5-2.2.3-1.1-.3-2.5-.9-4-2.3-1.5-1.4-2.3-2.8-2.7-3.9-.3-.8-.2-1.6.2-2.2Z"/></svg>
+      <span>Chat on WhatsApp</span>
+      <span class="contact-whatsapp-number">+250 782 511 514</span>
+    </a>
     <div class="contact-grid">
       <div class="contact-info fade-in">
         <a href="mailto:richardmanzi30@gmail.com" class="contact-item"><div class="contact-icon">✉</div><div><div class="contact-label">Email</div><div class="contact-value" style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">richardmanzi30@gmail.com <button onclick="event.preventDefault(); navigator.clipboard.writeText('richardmanzi30@gmail.com').then(()=>{this.textContent='✓ Copied!'; this.style.background='#27ae60'; setTimeout(()=>{this.textContent='📋 Copy'; this.style.background='';},2000)})" style="background:rgba(195,216,9,0.12); color:var(--lime); border:1px solid rgba(195,216,9,0.3); padding:0.15rem 0.6rem; border-radius:5px; font-size:0.7rem; font-weight:700; cursor:pointer; white-space:nowrap;">📋 Copy</button></div></div></a>
@@ -1476,6 +1440,8 @@
 
   // SCROLL PROGRESS + BACK TO TOP + ACTIVE NAV + HIRE BANNER
   let bannerShown = false;
+  let requestedMobileTabHref = '';
+  let tabScrollSettleTimer;
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
     document.getElementById('progress-bar').style.width = scrolled + '%';
@@ -1489,7 +1455,42 @@
     let current = '';
     document.querySelectorAll('section[id]').forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
     document.querySelectorAll('.nav-links li a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+    const aboutTop = document.getElementById('about').offsetTop - 220;
+    const projectsTop = document.getElementById('projects').offsetTop - 220;
+    const contactTop = document.getElementById('contact').offsetTop - 220;
+    let activeTabHref = window.scrollY >= contactTop ? '#contact' : window.scrollY >= projectsTop ? '#projects' : window.scrollY >= aboutTop ? '#about' : '#hero';
+    if (requestedMobileTabHref && requestedMobileTabHref !== activeTabHref) {
+      activeTabHref = requestedMobileTabHref;
+      clearTimeout(tabScrollSettleTimer);
+      tabScrollSettleTimer = setTimeout(() => {
+        requestedMobileTabHref = '';
+        window.dispatchEvent(new Event('scroll'));
+      }, 180);
+    } else if (requestedMobileTabHref) {
+      requestedMobileTabHref = '';
+      clearTimeout(tabScrollSettleTimer);
+    }
+    document.querySelectorAll('.mobile-tabbar a').forEach(a => {
+      const active = a.getAttribute('href') === activeTabHref;
+      a.classList.toggle('is-active', active);
+      if (active) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
   });
+  document.querySelectorAll('.mobile-tabbar a').forEach(a => a.addEventListener('click', () => {
+    requestedMobileTabHref = a.getAttribute('href');
+    clearTimeout(tabScrollSettleTimer);
+    tabScrollSettleTimer = setTimeout(() => {
+      requestedMobileTabHref = '';
+      window.dispatchEvent(new Event('scroll'));
+    }, 3500);
+    document.querySelectorAll('.mobile-tabbar a').forEach(tab => {
+      const active = tab === a;
+      tab.classList.toggle('is-active', active);
+      if (active) tab.setAttribute('aria-current', 'page');
+      else tab.removeAttribute('aria-current');
+    });
+  }));
 
   // TYPING EFFECT
   const titles = ['Software Developer', 'Web Developer', 'AI Builder', 'Creative Technologist', 'Photographer & Videographer'];
@@ -1518,48 +1519,13 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
 
-  // MOBILE DRAWER
-  function openDrawer() {
-    const drawer = document.getElementById('mobile-drawer');
-    drawer.classList.add('open');
-    drawer.setAttribute('aria-hidden', 'false');
-    document.getElementById('drawer-overlay').classList.add('open');
-    document.getElementById('menu-toggle').setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-    drawer.querySelector('.drawer-close').focus({ preventScroll: true });
-  }
-  function closeDrawer() {
-    const drawer = document.getElementById('mobile-drawer');
-    const wasOpen = drawer.classList.contains('open');
-    drawer.classList.remove('open');
-    drawer.setAttribute('aria-hidden', 'true');
-    document.getElementById('drawer-overlay').classList.remove('open');
-    document.getElementById('menu-toggle').setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-    if (wasOpen) document.getElementById('menu-toggle').focus({ preventScroll: true });
-  }
-  document.getElementById('drawer-overlay').addEventListener('click', closeDrawer);
-  document.getElementById('mobile-drawer').querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    closeDrawer();
-    if (a.hash) setTimeout(() => document.getElementById('menu-toggle').focus({ preventScroll: true }), 0);
-  }));
-  closeDrawer();
-
   // MODALS
   function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow = 'hidden'; }
   function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow = ''; }
   function closeModalOutside(e, id) { if (e.target === document.getElementById(id)) closeModal(id); }
   document.addEventListener('keydown', e => {
-    const drawer = document.getElementById('mobile-drawer');
     if (e.key === 'Escape') {
       document.querySelectorAll('.modal-overlay.open').forEach(m => { m.classList.remove('open'); document.body.style.overflow = ''; });
-      closeDrawer();
-    }
-    if (e.key === 'Tab' && drawer.classList.contains('open')) {
-      const items = drawer.querySelectorAll('a[href], button:not([disabled])');
-      const first = items[0], last = items[items.length - 1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
   });
 
