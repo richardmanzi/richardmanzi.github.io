@@ -238,7 +238,7 @@ body > nav:not(.mobile-tabbar) {
 section { padding: clamp(4.5rem, 8vw, 8.5rem) 5% !important; scroll-margin-top: 5.5rem; }
 .section-inner, .why-inner { width: 100%; max-width: var(--page-max-width); margin: 0 auto; }
 #why-me, #skills, #education, #testimonials, #certificates, #contact, #availability { background-color: #fff !important; color: #000; }
-#about, #services, #projects, #experience, #photography, #languages, #blog, #pricing { background-color: var(--color-soft-paper) !important; color: #000; }
+#about, #services, #projects, #experience, #languages, #blog, #pricing { background-color: var(--color-soft-paper) !important; color: #000; }
 .section-tag { display: inline-block; margin-bottom: .6rem; color: #6d6d6d; font-size: .7rem; font-weight: 400; letter-spacing: .16em; line-height: 1.4; text-transform: uppercase; }
 .section-title, .why-title { margin: 0 0 .75rem; color: #000; font-family: var(--font-roobert); font-size: clamp(2.3rem, 5.7vw, 4.8rem); font-weight: 300; letter-spacing: -.065em; line-height: 1.03; }
 .section-title span, .why-title span { color: inherit; }
@@ -454,21 +454,13 @@ section { padding: clamp(4.5rem, 8vw, 8.5rem) 5% !important; scroll-margin-top: 
 .t-form-stars input:checked ~ label, .t-form-stars label:hover, .t-form-stars label:hover ~ label { color: #000; }
 .t-form-btn, .form-btn { width: fit-content; cursor: pointer; }
 
-/* Languages, photography, certificates, blog */
+/* Languages, certificates, blog */
 .lang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: .9rem; }
 .lang-card { padding: 1.2rem; text-align: left; }
 .lang-flag { margin-bottom: .45rem; font-size: 1.7rem; filter: grayscale(1); }
 .lang-name { margin-bottom: .15rem; color: #000; font-size: .93rem; font-weight: 500; }
 .lang-level { color: #6d6d6d; font-size: .77rem; }
 .lang-stars { margin-top: .35rem; }
-#photography .about-card { min-height: 100%; padding: 0; overflow: hidden; border: 1px solid #d5d5d5; background: #fff; }
-#photography .about-card > div:first-child { min-height: 180px; background: #e6e6e6 !important; color: #000 !important; filter: grayscale(1); }
-#photography .about-card > div:nth-child(2) { padding: 1.3rem !important; }
-#photography .about-card > div:nth-child(2) > div:first-child { color: #000 !important; font-weight: 500 !important; }
-#photography .about-card > div:nth-child(2) > div:last-child { color: #6d6d6d !important; }
-#photography .section-inner > div[style*="background:var(--card)"] { border: 1px solid #d4d4d4 !important; border-radius: 0 !important; background: #fff !important; }
-#photography .section-inner > div[style*="background:var(--card)"] img { border: 0 !important; border-radius: 0 !important; }
-#photography .section-inner > div[style*="background:var(--card)"] div { color: inherit; }
 #certificates > .section-inner > div[style*="grid-template-columns"] { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 1rem !important; }
 #certificates a { color: inherit; }
 #certificates .service-card { height: 100%; padding: 1.35rem !important; border: 1px solid #d5d5d5 !important; border-radius: 0 !important; background: #fff !important; }
@@ -676,7 +668,6 @@ body > main:not(#main-content) a:hover { background: #000; color: #fff; }
   .countdown-card { padding: 1.1rem; }
   .footer-inner { align-items: flex-start; flex-direction: column; }
   footer { padding: 1.8rem 1.2rem; }
-  #photography .section-inner > div[style*="background:var(--card)"] { gap: 1rem !important; padding: 1rem !important; }
 }
 @media (max-width: 380px) {
   .why-grid { grid-template-columns: 1fr; }
