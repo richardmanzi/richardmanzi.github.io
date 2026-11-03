@@ -8,7 +8,7 @@ const APP_SHELL = [
   INDEX_URL,
   OFFLINE_URL,
   new URL('profile.webp', HOME_URL).href,
-  new URL('glass.css?v=editorial-2026-11-03', HOME_URL).href,
+  new URL('glass.css?v=editorial-2026-11-03-r2', HOME_URL).href,
   new URL('manifest.json', HOME_URL).href,
   new URL('testimonials.json', HOME_URL).href,
   new URL('app-icon-192.png', HOME_URL).href,
