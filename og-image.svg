@@ -1,12 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Richard Manzi — Software Developer and Creative Technologist</title>
-  <desc id="desc">Portfolio of Richard Manzi from Kigali, Rwanda.</desc>
-  <rect width="1200" height="630" fill="#222022"/>
-  <circle cx="1040" cy="-20" r="330" fill="#C3D809" opacity="0.16"/>
-  <circle cx="1100" cy="540" r="240" fill="#C3D809" opacity="0.08"/>
-  <rect x="72" y="72" width="1056" height="486" rx="28" fill="none" stroke="#C3D809" stroke-opacity="0.35" stroke-width="2"/>
-  <text x="110" y="180" fill="#C3D809" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="4">RICHARD MANZI</text>
-  <text x="110" y="300" fill="#F5F5F0" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="800">Software Developer</text>
-  <text x="110" y="390" fill="#F5F5F0" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="400">&amp; Creative Technologist</text>
-  <text x="110" y="478" fill="#999899" font-family="Arial, Helvetica, sans-serif" font-size="28">Kigali, Rwanda · AI · Web · Automation</text>
+  <desc id="desc">Portfolio of Richard Manzi from Kigali, Rwanda. Web, AI, automation, and visual storytelling.</desc>
+  <defs>
+    <radialGradient id="liquid" cx="77%" cy="50%" r="58%">
+      <stop offset="0" stop-color="#a0e0ab" stop-opacity=".9"/>
+      <stop offset=".44" stop-color="#ffac2e" stop-opacity=".75"/>
+      <stop offset=".78" stop-color="#a52d25" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shade" cx="70%" cy="48%" r="72%">
+      <stop offset="0" stop-color="#000" stop-opacity=".04"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".6"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#000"/>
+  <ellipse cx="930" cy="325" rx="390" ry="340" fill="url(#liquid)"/>
+  <rect width="1200" height="630" fill="url(#shade)"/>
+  <text x="86" y="118" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="400" letter-spacing="4">RICHARD MANZI</text>
+  <text x="82" y="300" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="104" font-weight="400" letter-spacing="-7">Software</text>
+  <text x="82" y="400" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="104" font-weight="400" letter-spacing="-7">Developer</text>
+  <text x="88" y="472" fill="#eee" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="400">AI Builder · Creative Technologist</text>
+  <text x="88" y="555" fill="#d0d0d0" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="400" letter-spacing="1">KIGALI, RWANDA</text>
 </svg>
